@@ -1,3 +1,4 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* Added Bottom Navigation Bar Widget to the UI Kit.
+* Developer Name : **Yesra Fatima**

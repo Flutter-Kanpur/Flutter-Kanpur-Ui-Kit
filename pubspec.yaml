@@ -1,7 +1,8 @@
 name: flutter_kanpur_ui_kit
 description: "Flutter Kanpur Ui Kit package"
 version: 0.0.1
-homepage:
+homepage: https://github.com/Flutter-Kanpur/Flutter-Kanpur-Ui-Kit
+repository: https://github.com/Flutter-Kanpur/Flutter-Kanpur-Ui-Kit
 
 environment:
   sdk: ^3.5.4
@@ -11,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_screenutil: ^5.9.3
+  google_fonts: ^7.0.2
   flutter_svg: ^2.2.3
 
 dev_dependencies:
