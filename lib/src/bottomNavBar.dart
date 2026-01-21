@@ -7,16 +7,24 @@ import 'package:google_fonts/google_fonts.dart';
 class BottomNavbar extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;
+  final double? horizontalPadding;
+  final double? verticalPadding;
 
   const BottomNavbar({
     super.key,
     required this.currentIndex,
     required this.onTap,
+    this.verticalPadding,
+    this.horizontalPadding,
   });
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 20),
+      padding: EdgeInsets.symmetric(
+        horizontal: horizontalPadding ?? 20.0.w,
+        vertical: verticalPadding ?? 20.0.h,
+      ),
+
       child: ClipRRect(
         borderRadius: BorderRadius.circular(40.r),
         child: Container(
@@ -40,45 +48,43 @@ class BottomNavbar extends StatelessWidget {
   Widget _navItem(String icon, int index) {
     final isSelected = currentIndex == index;
 
-    return Padding(
-      padding: EdgeInsets.only(left: 0.sp, right: 0.sp),
-      child: GestureDetector(
-        onTap: () => onTap(index),
-        child: Container(
-          height: 40.h,
-          padding: isSelected
-              ? EdgeInsets.symmetric(horizontal: 18.sp)
-              : EdgeInsets.zero,
-          decoration: BoxDecoration(
-            color: isSelected ? const Color(0xFF363636) : Colors.transparent,
-            borderRadius: BorderRadius.circular(40.r),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SvgPicture.asset(
-                icon,
-                height: 0.023.sh,
-                colorFilter: ColorFilter.mode(
-                  isSelected ? const Color(0xffFFFFFF) : const Color(0xffA8A7A8),
-                  BlendMode.srcIn,
+    return GestureDetector(
+      onTap: () => onTap(index),
+      child: Container(
+        height: 40.h,
+        padding: isSelected
+            ? EdgeInsets.symmetric(horizontal: 15.sp)
+            : EdgeInsets.zero,
+        decoration: BoxDecoration(
+          color: isSelected ? const Color(0xFF363636) : Colors.transparent,
+          borderRadius: BorderRadius.circular(40.r),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              icon,
+              package: 'flutter_kanpur_ui_kit',
+              height: 0.023.sh,
+              colorFilter: ColorFilter.mode(
+                isSelected ? const Color(0xffFFFFFF) : const Color(0xffA8A7A8),
+                BlendMode.srcIn,
+              ),
+            ),
+
+            if (isSelected && index != 2) ...[
+              10.horizontalSpace,
+              Text(
+                _labelForIndex(index),
+                style: GoogleFonts.poppins(
+                  color:  const Color(0XFFFFFFFF),
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
-
-              if (isSelected && index != 2) ...[
-                10.horizontalSpace,
-                Text(
-                  _labelForIndex(index),
-                  style: GoogleFonts.poppins(
-                    color:  const Color(0XFFFFFFFF),
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ],
             ],
-          ),
+          ],
         ),
       ),
     );

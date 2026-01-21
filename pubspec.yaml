@@ -28,7 +28,11 @@ flutter:
 
   # To add assets to your package, add an assets section, like this:
   assets:
-    - assets/
+    - assets/home.svg
+    - assets/search.svg
+    - assets/create.svg
+    - assets/trending.svg
+    - assets/profile.svg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   #
