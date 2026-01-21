@@ -4,12 +4,27 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_kanpur_ui_kit/core/utils/assets_path.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/// A customizable bottom navigation bar widget.
+///
+/// Displays SVG icons with an animated selected state and optional labels.
+/// Designed to be reusable across different applications.
 class BottomNavbar extends StatelessWidget {
+  /// The currently selected navigation index.
   final int currentIndex;
+
+  /// Callback triggered when a navigation item is tapped.
   final ValueChanged<int> onTap;
+
+  /// Optional horizontal padding for the navigation bar.
   final double? horizontalPadding;
+
+  /// Optional vertical padding for the navigation bar.
   final double? verticalPadding;
 
+  /// Creates a [BottomNavbar] widget.
+  ///
+  /// The [currentIndex] indicates the active tab,
+  /// and [onTap] is called with the selected index.
   const BottomNavbar({
     super.key,
     required this.currentIndex,
@@ -17,6 +32,7 @@ class BottomNavbar extends StatelessWidget {
     this.verticalPadding,
     this.horizontalPadding,
   });
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,7 +40,6 @@ class BottomNavbar extends StatelessWidget {
         horizontal: horizontalPadding ?? 20.0.w,
         vertical: verticalPadding ?? 20.0.h,
       ),
-
       child: ClipRRect(
         borderRadius: BorderRadius.circular(40.r),
         child: Container(
@@ -45,6 +60,9 @@ class BottomNavbar extends StatelessWidget {
     );
   }
 
+  /// Builds an individual navigation item.
+  ///
+  /// Displays an SVG icon and optional label when selected.
   Widget _navItem(String icon, int index) {
     final isSelected = currentIndex == index;
 
@@ -68,17 +86,18 @@ class BottomNavbar extends StatelessWidget {
               package: 'flutter_kanpur_ui_kit',
               height: 0.023.sh,
               colorFilter: ColorFilter.mode(
-                isSelected ? const Color(0xffFFFFFF) : const Color(0xffA8A7A8),
+                isSelected
+                    ? const Color(0xffFFFFFF)
+                    : const Color(0xffA8A7A8),
                 BlendMode.srcIn,
               ),
             ),
-
             if (isSelected && index != 2) ...[
               10.horizontalSpace,
               Text(
                 _labelForIndex(index),
                 style: GoogleFonts.poppins(
-                  color:  const Color(0XFFFFFFFF),
+                  color: const Color(0XFFFFFFFF),
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w600,
                 ),
@@ -90,6 +109,7 @@ class BottomNavbar extends StatelessWidget {
     );
   }
 
+  /// Returns the label text for a given navigation index.
   String _labelForIndex(int index) {
     switch (index) {
       case 0:
