@@ -7,3 +7,8 @@
 
 * Assets Path Refracted.
 * Developer Name : **Yesra Fatima**
+
+## 0.0.3
+
+* Assets issue fixed for the bottom nav bar.
+* Developer Name : **Yesra Fatima**
