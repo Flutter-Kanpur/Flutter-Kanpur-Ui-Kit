@@ -12,3 +12,8 @@
 
 * Assets issue fixed for the bottom nav bar.
 * Developer Name : **Yesra Fatima**
+
+## 0.0.4
+
+* Added Documentation in all files.
+* Developer Name : **Yesra Fatima**
