@@ -1,4 +1,4 @@
-# Flutter Kanpur UI Kit 
+# **Flutter Kanpur UI Kit**
 
 Flutter Kanpur UI Kit is an open-source Flutter component library built by the **Flutter Kanpur Community** to help developers create clean, consistent, and production-ready UIs faster.
 
@@ -16,7 +16,7 @@ This package is designed to grow over time with reusable widgets, animations, an
 -  Custom Navigation Bar (initial release)
 
 More widgets will be added through community contributions.
- ___
+
 ##  Getting Started
 
 ### Prerequisites

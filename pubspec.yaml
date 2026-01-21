@@ -1,10 +1,10 @@
 name: flutter_kanpur_ui_kit
 description: >
-  A reusable Flutter UI kit created by the Flutter Kanpur community,
-  offering customizable widgets such as bottom navigation bars,
-  SVG-based icons, and shared UI utilities for building modern apps.
+  A reusable Flutter UI kit from the Flutter Kanpur community
+  featuring customizable widgets.
 
-version: 0.0.4
+
+version: 0.0.5
 homepage: https://github.com/Flutter-Kanpur/Flutter-Kanpur-Ui-Kit
 repository: https://github.com/Flutter-Kanpur/Flutter-Kanpur-Ui-Kit
 
