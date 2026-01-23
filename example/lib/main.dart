@@ -73,6 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
               _getPageName(_currentIndex),
               style: Theme.of(context).textTheme.titleLarge,
             ),
+            GradientButton(
+              text: 'Gradient Button',
+              onTap: () {},
+            ),
           ],
         ),
       ),

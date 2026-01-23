@@ -13,7 +13,8 @@ This package is designed to grow over time with reusable widgets, animations, an
 -  Modular and customizable widgets
 -  Community-driven and open-source
 -  Built with Flutter best practices
--  Custom Navigation Bar (initial release)
+-  Custom Navigation Bar 
+-  Gradient Button 
 
 More widgets will be added through community contributions.
 

@@ -22,3 +22,8 @@
 
 * Added Bottom Navigation Bar Widget to the UI Kit.
 * Developer Name : **Yesra Fatima**
+
+## 0.0.6
+
+* Added Gradient Button Widget to the UI Kit.
+* Developer Name : **Karan Jain**
