@@ -33,3 +33,8 @@
 * Removed depreciated function .withOpacity() to withValues().
 * Fixed height of the readme Image.
 * Developer Name : **Karan Jain**
+
+## 0.0.8
+
+* Fixed height of the readme Image.
+* Developer Name : **Karan Jain**
