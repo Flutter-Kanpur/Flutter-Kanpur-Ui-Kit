@@ -58,7 +58,7 @@ class GradientButton extends StatelessWidget {
             /// Shadow for elevation and depth effect
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.4),
+                color: Colors.black.withValues(alpha: 0.4),
                 blurRadius: 12,
                 offset: const Offset(0, 6),
               ),
@@ -91,7 +91,7 @@ class GradientButton extends StatelessWidget {
                     end: Alignment(0, 1),
                     stops: [-1, 0.2],
                     colors: [
-                      Colors.white.withOpacity(0.95),
+                      Colors.white.withValues(alpha: 0.95),
                       Colors.transparent,
                     ],
                   ),
@@ -108,7 +108,7 @@ class GradientButton extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.center,
                     colors: [
-                      Colors.white.withOpacity(0.28),
+                      Colors.white.withValues(alpha: 0.28),
                       Colors.transparent,
                     ],
                   ),
@@ -126,7 +126,7 @@ class GradientButton extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     stops: [-1, 0.2],
                     colors: [
-                      Colors.white.withOpacity(0.55),
+                      Colors.white.withValues(alpha: 0.55),
                       Colors.transparent,
                     ],
                   ),

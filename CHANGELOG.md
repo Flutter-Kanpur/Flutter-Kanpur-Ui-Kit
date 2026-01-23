@@ -27,3 +27,9 @@
 
 * Added Gradient Button Widget to the UI Kit.
 * Developer Name : **Karan Jain**
+
+## 0.0.7
+
+* Removed depreciated function .withOpacity() to withValues().
+* Fixed height of the readme Image.
+* Developer Name : **Karan Jain**
