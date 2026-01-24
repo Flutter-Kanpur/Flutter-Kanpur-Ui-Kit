@@ -6,4 +6,5 @@
 library flutter_kanpur_ui_kit;
 
 export 'src/bottom_nav_bar.dart';
+export 'src/glass_bottom_nav_bar.dart';
 export 'src/gradient_button.dart';

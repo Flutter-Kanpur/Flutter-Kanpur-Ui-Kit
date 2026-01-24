@@ -38,3 +38,8 @@
 
 * Fixed height of the readme Image.
 * Developer Name : **Karan Jain**
+
+## 0.0.9
+
+* Added Glass Effect Version of BottomNavBar.
+* Developer Name : **Drishtant Ranjan**

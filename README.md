@@ -11,6 +11,7 @@ This package is designed to grow over time with reusable widgets, animations, an
 ##  Features
 
 -  **Custom Navigation Bar** - Flutter UI component with elegant reveal-text interactions.
+-  **Glass Navigation Bar** - Flutter UI component with elegant glass effect.
 -  **Gradient Button** - Flutter Custom Button with Gradient effect to create a 3D view.
 
 More widgets will be added through community contributions.
@@ -28,8 +29,8 @@ Add this to your `pubspec.yaml`:
 
 
 dependencies:
-  flutter_kanpur_ui_kit: ^0.0.6
+  flutter_kanpur_ui_kit: ^0.0.9
 
 
 ```dart
-flutter pub get 'flutter_kanpur_ui_kit: ^0.0.6'
+flutter pub get 'flutter_kanpur_ui_kit: ^0.0.9'
