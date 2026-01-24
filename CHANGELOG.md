@@ -43,3 +43,8 @@
 
 * Added Glass Effect Version of BottomNavBar.
 * Developer Name : **Drishtant Ranjan**
+
+## 0.0.10
+
+* Added Glass Effect Version of BottomNavBar.
+* Developer Name : **Drishtant Ranjan**

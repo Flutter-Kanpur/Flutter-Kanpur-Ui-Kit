@@ -160,7 +160,7 @@ class GlassBottomNavbar extends StatelessWidget {
             : EdgeInsets.zero,
         decoration: BoxDecoration(
           color: isSelected
-              ? Colors.white.withOpacity(0.9) // Light, opaque background for selected
+              ? Colors.white.withValues(alpha: 0.9) // Light, opaque background for selected
               : Colors.transparent,
           borderRadius: BorderRadius.circular(40.r),
         ),
@@ -176,7 +176,7 @@ class GlassBottomNavbar extends StatelessWidget {
               colorFilter: ColorFilter.mode(
                 isSelected
                     ? const Color(0xFF4A4A4A) // Dark gray for selected icon
-                    : Colors.black.withOpacity(0.9), // White outline for unselected
+                    : Colors.black.withValues(alpha: 0.9), // White outline for unselected
                 BlendMode.srcIn,
               ),
             ),
