@@ -4,8 +4,7 @@ Flutter Kanpur UI Kit is an open-source Flutter component library built by the *
 
 This package is designed to grow over time with reusable widgets, animations, and UI patterns commonly used in Flutter applications.
 
-![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/2fee3676-2505-4629-b041-077cd82ae63e)
-<img width="800" height="400" alt="Bottom NavBar( ) (1)" src="https://github.com/user-attachments/assets/4e8f1564-1d39-46e4-9ad3-2a634cf170e0" />
+![BottomNavBar-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/9b6d407b-90d1-490a-bce8-61976427900e)
 
 ---
 ##  Features
