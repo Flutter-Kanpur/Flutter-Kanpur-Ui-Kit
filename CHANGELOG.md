@@ -48,3 +48,8 @@
 
 * Added Glass Effect Version of BottomNavBar.
 * Developer Name : **Drishtant Ranjan**
+
+## 0.0.11
+
+* Added TextStyle and conditional to show box shadow parameter for the Gradient Button.
+* Developer Name : **Drishtant Ranjan**

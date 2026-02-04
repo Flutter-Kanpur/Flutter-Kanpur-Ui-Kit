@@ -14,6 +14,9 @@ class GradientButton extends StatelessWidget {
   /// The label text displayed on the button
   final String text;
 
+  /// Add the TextStyle of the button text
+  final TextStyle? textStyle;
+
   /// Callback executed when the button is tapped
   final VoidCallback onTap;
 
@@ -25,6 +28,9 @@ class GradientButton extends StatelessWidget {
   /// Can be constrained externally if needed
   final double width;
 
+  /// Box Shadow for the button
+  final bool showBoxShadow;
+
   /// Optional custom font size for button text
   final double? fontSize;
 
@@ -35,6 +41,8 @@ class GradientButton extends StatelessWidget {
     this.height = 45, // Default button height
     this.width = double.infinity,
     this.fontSize,
+    this.textStyle,
+    this.showBoxShadow = false,// Default hide box shadow
   });
 
   @override
@@ -55,14 +63,16 @@ class GradientButton extends StatelessWidget {
             /// Creates pill-shaped rounded button
             borderRadius: BorderRadius.circular(height / 2),
 
-            /// Shadow for elevation and depth effect
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.4),
-                blurRadius: 12,
-                offset: const Offset(0, 6),
-              ),
-            ],
+            // /// Shadow for elevation and depth effect
+            boxShadow: !showBoxShadow
+                ? []
+                : [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.4),
+                      blurRadius: 12,
+                      offset: const Offset(0, 6),
+                    ),
+                  ],
           ),
           child: Stack(
             children: [
@@ -87,11 +97,11 @@ class GradientButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(height / 2),
                   gradient: LinearGradient(
-                    begin: Alignment(-1, -1),
+                    begin:  Alignment(-1, -1),
                     end: Alignment(0, 1),
                     stops: [-1, 0.2],
                     colors: [
-                      Colors.white.withValues(alpha: 0.95),
+                      Colors.white.withValues(alpha: 0.45),
                       Colors.transparent,
                     ],
                   ),
@@ -108,7 +118,7 @@ class GradientButton extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.center,
                     colors: [
-                      Colors.white.withValues(alpha: 0.28),
+                      Colors.white.withValues(alpha: 0.22),
                       Colors.transparent,
                     ],
                   ),
@@ -126,7 +136,7 @@ class GradientButton extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     stops: [-1, 0.2],
                     colors: [
-                      Colors.white.withValues(alpha: 0.55),
+                      Colors.white.withValues(alpha: 0.15),
                       Colors.transparent,
                     ],
                   ),
@@ -138,12 +148,13 @@ class GradientButton extends StatelessWidget {
               Center(
                 child: Text(
                   text,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: fontSize ?? height * 0.30,
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 0.4,
-                  ),
+                  style: textStyle ??
+                      TextStyle(
+                        color: Colors.white,
+                        fontSize: fontSize ?? height * 0.30,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.4,
+                      ),
                 ),
               ),
             ],

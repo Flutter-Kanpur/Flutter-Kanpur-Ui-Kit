@@ -122,8 +122,9 @@ class GlassBottomNavbar extends StatelessWidget {
                 end: Alignment.bottomRight,
                 colors: [
                   Color(0xB3FFFFFF), // #FFFFFF at 70% opacity
-                  Color(0x00F3F8FF), // #F3F8FF at 0% opacity
+
                   Color(0x66FFFFFF), // #FFFFFF at 40% opacity
+                  Color(0x00F3F8FF), // #F3F8FF at 0% opacity
                   Color(0xCCE4EFFF), // #E4EFFF at 80% opacity
                 ],
                 stops: [0.0, 0.3, 0.6, 1.0],
