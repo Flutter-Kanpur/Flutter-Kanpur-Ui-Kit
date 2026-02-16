@@ -11,6 +11,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 ///
 /// Suitable for authentication buttons, CTAs, and modern UI designs.
 class GradientButton extends StatelessWidget {
+  /// show circular progress bar color for loading
+  final bool isLoading;
+
+  final Color loadingIndicatorColor;
+
   /// The label text displayed on the button
   final String text;
 
@@ -34,6 +39,9 @@ class GradientButton extends StatelessWidget {
   /// Optional custom font size for button text
   final double? fontSize;
 
+  /// Color Property support added for changing button color
+  final Color color;
+
   const GradientButton({
     super.key,
     required this.text,
@@ -41,12 +49,16 @@ class GradientButton extends StatelessWidget {
     this.height = 45, // Default button height
     this.width = double.infinity,
     this.fontSize,
+    this.isLoading = true,
     this.textStyle,
-    this.showBoxShadow = false,// Default hide box shadow
+    this.color = Colors.black,
+    this.loadingIndicatorColor = Colors.white,
+    this.showBoxShadow = false, // Default hide box shadow
   });
 
   @override
   Widget build(BuildContext context) {
+    Color buttonColor = color;
     return GestureDetector(
       /// Handles tap interaction for the button
       onTap: onTap,
@@ -68,7 +80,7 @@ class GradientButton extends StatelessWidget {
                 ? []
                 : [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.4),
+                      color: buttonColor.withValues(alpha: 0.4),
                       blurRadius: 12,
                       offset: const Offset(0, 6),
                     ),
@@ -81,11 +93,11 @@ class GradientButton extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(height / 2),
-                  gradient: const LinearGradient(
+                  gradient:  LinearGradient(
                     begin: Alignment.topCenter,
-                    end: Alignment(0, 9),
-                    stops: [0.0, 0.05],
-                    colors: [Color.fromARGB(255, 25, 25, 25), Colors.black],
+                    end: const Alignment(0, 9),
+                    stops:const [0.0, 0.05],
+                    colors: [buttonColor.withValues(alpha: 2.8), buttonColor],
                   ),
                 ),
               ),
@@ -97,7 +109,7 @@ class GradientButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(height / 2),
                   gradient: LinearGradient(
-                    begin:  Alignment(-1, -1),
+                    begin: Alignment(-1, -1),
                     end: Alignment(0, 1),
                     stops: [-1, 0.2],
                     colors: [
@@ -146,16 +158,25 @@ class GradientButton extends StatelessWidget {
               /// Centered button label text
               /// Automatically scales based on button height if fontSize is not provided
               Center(
-                child: Text(
-                  text,
-                  style: textStyle ??
-                      TextStyle(
-                        color: Colors.white,
-                        fontSize: fontSize ?? height * 0.30,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 0.4,
+                child: isLoading
+                    ? SizedBox(
+                        height: 15.h,
+                        width: 15.h,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 1.5,
+                          color: loadingIndicatorColor,
+                        ),
+                      )
+                    : Text(
+                        text,
+                        style: textStyle ??
+                            TextStyle(
+                              color: Colors.white,
+                              fontSize: fontSize ?? height * 0.30,
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 0.4,
+                            ),
                       ),
-                ),
               ),
             ],
           ),

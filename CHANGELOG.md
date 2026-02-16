@@ -53,3 +53,8 @@
 
 * Added TextStyle and conditional to show box shadow parameter for the Gradient Button.
 * Developer Name : **Drishtant Ranjan**
+
+## 0.0.12
+
+* Added Color property and loading indicator for the Gradient Button.
+* Developer Name : **Drishtant Ranjan**
