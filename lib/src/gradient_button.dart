@@ -49,7 +49,7 @@ class GradientButton extends StatelessWidget {
     this.height = 45, // Default button height
     this.width = double.infinity,
     this.fontSize,
-    this.isLoading = true,
+    this.isLoading = false,
     this.textStyle,
     this.color = Colors.black,
     this.loadingIndicatorColor = Colors.white,

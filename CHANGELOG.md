@@ -58,3 +58,8 @@
 
 * Added Color property and loading indicator for the Gradient Button.
 * Developer Name : **Drishtant Ranjan**
+
+## 0.0.13
+
+* Continuous Loader showing on the button issue fixed.
+* Developer Name : **Drishtant Ranjan**

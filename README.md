@@ -28,8 +28,8 @@ Add this to your `pubspec.yaml`:
 
 
 dependencies:
-  flutter_kanpur_ui_kit: ^0.0.12
+  flutter_kanpur_ui_kit: ^0.0.13
 
 
 ```dart
-flutter pub get 'flutter_kanpur_ui_kit: ^0.0.12'
+flutter pub get 'flutter_kanpur_ui_kit: ^0.0.13'
